@@ -5,3 +5,8 @@
     box-sizing: border-box;
 }
 
+:root {
+    --body-font: "Arial", sans-serif;
+    --title-font: "Barlow Condensed", sans-serif;
+}
+
