@@ -5,8 +5,109 @@
     box-sizing: border-box;
 }
 
+/* CSS Variables */
 :root {
     --body-font: "Arial", sans-serif;
     --title-font: "Barlow Condensed", sans-serif;
+    --text-hover-color: #ccc;
 }
 
+/* Navigation Bar */
+nav {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+  
+.logo-link {
+    display: flex;
+    align-items: center;
+}
+  
+.logo {
+    width: 120px;
+    margin-right: 1rem;
+}
+  
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+  
+nav ul li {
+    margin-right: 1rem;
+}
+  
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-family: var(--body-font);
+    font-weight: 400;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+  
+nav ul li a:hover {
+    color: var(--text-hover-color)
+}
+ 
+/* Search Input Styles */
+.search-container {
+    display: flex;
+    align-items: center;
+}
+  
+.search-input {
+    width: 20px;
+    padding: 15px 40px 15px 15px;
+    position: relative;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    border: none;
+    outline: none;
+    transition: width 0.4s ease;
+}
+.search-input:hover {
+    width: 400px;
+    padding-left: 20px;
+}
+i {
+    position: relative;
+    left: -44px;
+    color: black;
+    pointer-events: none;
+}
+
+
+/* Main Content */
+main {
+    padding: 500px; /*REMOVE BEFORE MERGE */
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    font-family: var(--body-font);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+footer a:hover {
+    color: var(--text-hover-color);
+}
+footer p {
+    margin: 0.5rem 0;
+}
