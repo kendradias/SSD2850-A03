@@ -22,16 +22,6 @@ nav {
     padding: 1rem;
 }
   
-.logo-link {
-    display: flex;
-    align-items: center;
-}
-  
-.logo {
-    width: 120px;
-    margin-right: 1rem;
-}
-  
 nav ul {
     display: flex;
     list-style-type: none;
@@ -74,6 +64,7 @@ nav ul li a:hover {
     outline: none;
     transition: width 0.4s ease;
 }
+/* Search Bar Animation based on hover state */
 .search-input:hover {
     width: 400px;
     padding-left: 20px;
@@ -83,12 +74,6 @@ i {
     left: -44px;
     color: black;
     pointer-events: none;
-}
-
-
-/* Main Content */
-main {
-    padding: 500px; /*REMOVE BEFORE MERGE */
 }
 
 /* Footer */
@@ -111,3 +96,104 @@ footer a:hover {
 footer p {
     margin: 0.5rem 0;
 }
+
+/* Hamburger Menu Styles */
+.hamburger-menu {
+    display: none; /* Hidden by default for larger screens */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+
+.hamburger-menu span {
+    display: block;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 4px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hamburger Animation States */
+.hamburger-menu.active span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Navigation Menu */
+.nav-links {
+    display: flex;
+    list-style: none;
+    transition: transform 0.3s ease;
+}
+
+.nav-links li {
+    margin-right: 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-family: var(--body-font);
+    font-size: 18px;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+    nav {
+        position: relative; /* Ensure the nav bar is the anchor for positioning */
+    }
+
+    .nav-links {
+        flex-direction: column;
+        position: absolute; /* Position relative to the nav */
+        top: 100%; /* Aligns directly below the nav bar */
+        right: 0; /* Aligns the dropdown to the right edge of the nav */
+        background-color: #333; /* Match nav background color */
+        width: 100%; /* Full-width dropdown */
+        padding: 1rem 0;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        z-index: 5; /* Ensure it's above other elements */
+    }
+
+    .nav-links.active {
+        transform: translateY(0); /* Dropdown slides down */
+        opacity: 1; /* Dropdown becomes visible */
+        visibility: visible;
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 0.5rem 0;
+    }
+
+    .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        font-family: var(--body-font);
+        font-size: 18px;
+        padding: 0.5rem 1rem;
+    }
+
+    .nav-links a:hover {
+        background-color: #444;
+    }
+}
+
+
