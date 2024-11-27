@@ -1,0 +1,103 @@
+
+/* CSS Reset */
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Main Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+
+/* Nav Styles */
+nav {
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    /* display: none; */
+}
+
+nav ul li {
+    font-size: 18px;
+    text-align: center;
+}
+
+nav ul li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+/* Article Styles */
+.articles-containter {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.article, .featured-article{
+    padding: 1rem;
+    gap: 10px;
+    background: pink;
+    border: 1px solid #221d1d;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.featured-article {
+    background-color: #f9f9f9;
+    border: 1px solid red;
+}
+
+.articles-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+/* Article Content Styling */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.article-img {
+    max-width: 500px;
+    height: auto;
+}
+.meta {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0.5rem 0;
+}
+
+.excerpt {
+    margin: 1rem 0;
+    color: #555;
+}
+
+.category, .tags {
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    color: #007bff;
+}
+
+.tags span {
+    margin-right: 0.5rem;
+}
+
+/* Mobile First Grid */
+.articles-grid {
+    grid-template-columns: 1fr; /*single column by default */
+}
