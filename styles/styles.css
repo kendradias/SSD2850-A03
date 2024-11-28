@@ -9,13 +9,14 @@
 :root {
     --body-font: "Arial", sans-serif;
     --title-font: "Barlow Condensed", sans-serif;
-    --off-white: #ccc;
+    --off-white: #b9b8b8;
     --white: #fff;
+    --main-background-color: black;
 }
 
-/* Navigation Bar */
+/************************************ NAVIGATION BAR **********************************/
 nav {
-    background-color: #333;
+    background-color: var(--main-background-color);
     color: var(--white);
     display: flex;
     justify-content: space-between;
@@ -40,7 +41,7 @@ nav ul li a {
     font-family: var(--body-font);
     font-weight: 400;
     font-size: 18px;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease; /*transition to hover color*/
 }
   
 nav ul li a:hover {
@@ -77,28 +78,7 @@ i {
     pointer-events: none;
 }
 
-/* Footer */
-footer {
-    background-color: #333;
-    color: var(--white);
-    font-family: var(--body-font);
-    padding: 2rem 0;
-    text-align: center;
-}
-
-footer a {
-    color: var(--white);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-footer a:hover {
-    color: var(--off-white);
-}
-footer p {
-    margin: 0.5rem 0;
-}
-
-/* Hamburger Menu Styles */
+/************************************ HAMBURGER MENU **********************************/
 .hamburger-menu {
     display: none; /* Hidden by default for larger screens */
     flex-direction: column;
@@ -121,21 +101,32 @@ footer p {
 /* Hamburger Animation States using nth-child */
 .hamburger-menu.active span:nth-child(1) {
     transform: translateY(10px) rotate(45deg);
+    z-index: 2;
 }
 
 .hamburger-menu.active span:nth-child(2) {
-    opacity: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #83d648;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(3.5);
+    z-index: 1;
+    transition: all 0.5s ease-in-out;
 }
 
 .hamburger-menu.active span:nth-child(3) {
     transform: translateY(-10px) rotate(-45deg);
+    z-index: 2;
 }
 
 /* Navigation Menu */
 .nav-links {
     display: flex;
     list-style: none;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; /*links drop down from top of page*/
 }
 
 .nav-links li {
@@ -149,8 +140,37 @@ footer p {
     font-size: 18px;
 }
 
-/* Tablet/Mobile Navigation */
+/************************************ FOOTER SECTION **********************************/
+footer {
+    background-color: var(--main-background-color);
+    color: var(--white);
+    font-family: var(--body-font);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+footer a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+footer a:hover {
+    color: var(--off-white);
+}
+footer p {
+    margin: 0.5rem 0;
+}
+
+/*REMOVE BEFORE MERGE - FOR DESIGN PURPOSES ONLY*/
+main {
+    padding: 600px;
+}
+
+
+/************************************ MEDIA QUERIES **********************************/
+/* Tablet */
 @media (max-width: 768px) {
+    /* Tablet/Mobile Navigation */
     .hamburger-menu {
         display: flex;
     }
@@ -165,7 +185,7 @@ footer p {
         position: absolute; /* Position relative to the nav */
         top: 100%; /* Aligns directly below the nav bar */
         right: 0; /* Aligns the dropdown to the right edge of the nav */
-        background-color: #333; /* Match nav background color */
+        background-color: var(--main-background-color); /* Match nav background color */
         width: 100%; /* Full-width dropdown */
         padding: 1rem 0;
         transform: translateY(-100%);
