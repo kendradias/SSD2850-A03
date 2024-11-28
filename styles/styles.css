@@ -55,12 +55,11 @@ nav ul li a:hover {
     color: var(--off-white)
 }
  
-/* Search Input Styles */
+/***********************************SEARCH BAR***************************************/
 .search-container {
     display: flex;
     margin-left: auto;
     align-items: center;
-    position: absoulte;
 }
   
 .search-input {
@@ -75,6 +74,7 @@ nav ul li a:hover {
     outline: none;
     transition: width 0.4s ease;
 }
+
 /* Search Bar Animation based on hover state */
 .search-input:hover {
     width: 350px;
@@ -119,24 +119,6 @@ i {
     transform: translateY(-10px) rotate(-45deg);
 }
 
-/********************************** Navigation Menu **********************************/
-.nav-links {
-    display: flex;
-    list-style: none;
-    transition: transform 0.3s ease; /*links drop down from top of page*/
-}
-
-.nav-links li {
-    margin-right: 1rem;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: var(--white);
-    font-family: var(--body-font);
-    font-size: 18px;
-}
-
 /************************************ FOOTER SECTION **********************************/
 footer {
     background-color: var(--main-background-color);
@@ -147,15 +129,22 @@ footer {
     border-top: 1px solid var(--lime-green);
 }
 
+footer p {
+    color: var(--lime-green);
+    font-family: var(--title-font);
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+
+/***************************************FOOTER NAV*************************************/
 .footer-nav {
     display: flex;
     justify-content: space-around; /* Center horizontally */
     padding: 1rem 0; /* Add some spacing */
     align-items: center; /* Center vertically */
-    height: auto;            /* Height expands automatically on small screens */
+    height: auto;  /* Height expands automatically on small screens */
 }
 
-/* Child Selector to set list style to none and add padding to all li items*/
 .footer-nav > ul > li {
     list-style: none;
     padding: .5em;
@@ -165,9 +154,8 @@ footer {
     color: var(--lime-green);
 }
 
-/*Adjacent Sibling Selector to place borders around menu items that are directly nect to another list item*/
-.menu-item + .menu-item {
-    border: 1px solid var(--white);
+.menu-item:not(:first-child) {
+    border: 1px solid var(--lime-green);
     border-radius: 30px;
 }
 
@@ -179,59 +167,41 @@ footer {
     cursor: pointer;
 }
 
-footer p {
-    color: var(--lime-green);
-    font-family: var(--title-font);
-    font-weight: 600;
-    margin: 0.5rem 0;
+/***************************SOCIAL MEDIA ICON SECTION********************************/
+.social-icon {
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;  
+    overflow: hidden; 
+    transition: transform 0.3s ease; 
 }
 
 /* Social Icons Container */
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 1rem; /* Space between icons */
-    margin-bottom: 1rem; /* Space between icons and footer paragraph */
-}
-
-/* Social Icon Styling */
-.social-icon {
-    display: inline-block;
-    width: 50px;   
-    height: 50px;  
-    overflow: hidden;  /* Hide overflowed content */
-    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    gap: 1rem;
+    margin-bottom: 1rem;
 }
 
 .social-icon img {
-    width: 100%;  
-    height: 100%; 
-    object-fit: cover; 
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
-/* Hover Effect: Grow in size */
 .social-icon:hover {
-    transform: scale(1.2); /* Increase size by 20% on hover */
+    transform: scale(1.2);
 }
-
-
-/*REMOVE BEFORE MERGE - FOR DESIGN PURPOSES ONLY*/
-main {
-    padding: 300px;
-}
-
 
 /************************************ MEDIA QUERIES **********************************/
-/* Tablet */
+/* Tablet View */
 @media (max-width: 768px) {
+
     /* Tablet/Mobile Navigation */
     .hamburger-menu {
         display: flex;
-    }
-    /*Stack Footer nav vertically*/
-    .footer-menu {
-        flex-direction: column; 
-        gap: 10px;
     }
     nav {
         position: relative; /* Ensure the nav bar is the anchor for positioning */
@@ -264,6 +234,12 @@ main {
     .nav-links li {
         text-align: center;
         margin: 0.5rem 0;
+    }
+
+    /*Stack Footer nav vertically*/
+    .footer-menu {
+        flex-direction: column; 
+        gap: 10px;
     }
 }
 
