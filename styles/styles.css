@@ -183,14 +183,6 @@ footer p {
         text-align: center;
         margin: 0.5rem 0;
     }
-
-    .nav-links a {
-        color: var(--white);
-        text-decoration: none;
-        font-family: var(--body-font);
-        font-size: 18px;
-        padding: 0.5rem 1rem;
-    }
 }
 
 
