@@ -9,13 +9,14 @@
 :root {
     --body-font: "Arial", sans-serif;
     --title-font: "Barlow Condensed", sans-serif;
-    --text-hover-color: #ccc;
+    --off-white: #ccc;
+    --white: #fff;
 }
 
 /* Navigation Bar */
 nav {
     background-color: #333;
-    color: #fff;
+    color: var(--white);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,7 +35,7 @@ nav ul li {
 }
   
 nav ul li a {
-    color: #fff;
+    color: var(--white);
     text-decoration: none;
     font-family: var(--body-font);
     font-weight: 400;
@@ -43,7 +44,7 @@ nav ul li a {
 }
   
 nav ul li a:hover {
-    color: var(--text-hover-color)
+    color: var(--off-white)
 }
  
 /* Search Input Styles */
@@ -66,7 +67,7 @@ nav ul li a:hover {
 }
 /* Search Bar Animation based on hover state */
 .search-input:hover {
-    width: 400px;
+    width: 350px;
     padding-left: 20px;
 }
 i {
@@ -79,19 +80,19 @@ i {
 /* Footer */
 footer {
     background-color: #333;
-    color: #fff;
+    color: var(--white);
     font-family: var(--body-font);
     padding: 2rem 0;
     text-align: center;
 }
 
 footer a {
-    color: #fff;
+    color: var(--white);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 footer a:hover {
-    color: var(--text-hover-color);
+    color: var(--off-white);
 }
 footer p {
     margin: 0.5rem 0;
@@ -112,12 +113,12 @@ footer p {
 .hamburger-menu span {
     display: block;
     height: 4px;
-    background-color: #fff;
+    background-color: var(--white);
     border-radius: 4px;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Hamburger Animation States */
+/* Hamburger Animation States using nth-child */
 .hamburger-menu.active span:nth-child(1) {
     transform: translateY(10px) rotate(45deg);
 }
@@ -143,7 +144,7 @@ footer p {
 
 .nav-links a {
     text-decoration: none;
-    color: #fff;
+    color: var(--white);
     font-family: var(--body-font);
     font-size: 18px;
 }
@@ -184,7 +185,7 @@ footer p {
     }
 
     .nav-links a {
-        color: #fff;
+        color: var(--white);
         text-decoration: none;
         font-family: var(--body-font);
         font-size: 18px;
