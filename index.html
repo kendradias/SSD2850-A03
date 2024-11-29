@@ -3,26 +3,286 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/styles.css">
+    <title>Simply Seven</title>
+
+    <!-- LINK TO BARLOW GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Creepster&family=Pirata+One&display=swap" rel="stylesheet">
-    <title>Simply Seven News</title>
+    
+    <!-- INTER AND POPPINS GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+     <!-- Font Awesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- LINK EXTERNAL STYLESHEET -->
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-     <header>
-            <h1>Website Title</h1>
-            <nav>
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </nav>
-        </header>
+    <header>
+        <nav class="header-nav">
+            <!--HAMBURGER MENU-->
+            <!-- <img src="images/logo-removebg.png" alt="Simply Seven News Logo" /> -->
+            <img src="images/logoc.png" alt="Simply Seven News Logo" />
+            <div class="hamburger-menu" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!--MAIN NAV-->
+            <ul class="nav-links" id="nav-links" aria-label="Main Navigation">
+                <li><a href="#">Compilations</a></li>
+                <li><a href="#">Design</a></li>
+                <li><a href="#">Development</a></li>
+                <li><a href="#">UX</a></li>
+            </ul>
+            <!--SEARCH BAR-->
+            <div class="search-container">
+                <input type="text" placeholder="Search..." class="search-input">
+                <i class="fas fa-search"></i>
+              </div>
+        </nav>
+    </header>
 
-</main>
+    <main class="container">
+        <!-- SECTION-1 -->
+        <section id="hero">
+            <h1>
+                <span>S</span><span>I</span><span>M</span><span>P</span><span>L</span><span>Y</span>
+                <span>S</span><span>E</span><span>V</span><span>E</span><span>N</span>
+            </h1>
+        </section>
 
-    <footer>© 2024 Team 3 - All rights reserved.</footer>
+        <!-- SECTION-2 -->
+        <section id="top-highlights">
+            <div class="highlight-container">
+                <!-- Video Section -->
+                <div class="highlight-video">
+                    <video width="100%" height="300px" controls>
+                        <source src="videos/animation.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
+                <!-- Content Section -->
+                <div class="highlight-content">
+                    <h2>Breaking News: Major Cybersecurity Breach Exposes User Data</h2>
+                    <p>A recent breach at a major tech company has exposed millions of users' personal data. This news is sending shockwaves across the tech industry, prompting security experts to reassess online safety protocols. Read on to find out what went wrong and how you can protect your data online.</p>
+                    <a href="#">Read Full Article</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION-3 -->
+        <h2 id="article-heading">Latest Articles</h2>
+        <section id="articles">
+            <!-- GURDEEP ARTICLES -->
+            <div class="article" id="gurdeep-article1">
+                <div class="image-container">
+                    <img src="images/gurdeep/calculator.png" alt="Simple Calculator">
+                </div>
+                <h3>Creating a Simple Calculator with HTML, CSS, and JavaScript</h3>
+                <p class="excerpt">Learn how to build a functional calculator using basic web development technologies.</p>
+                <p class="body-content">A calculator is a basic yet essential tool that demonstrates the power of programming. It supports addition, subtraction, multiplication, and division, showcasing DOM manipulation and event handling.</p>
+                <p>Category: <span>Projects</span></p>
+                <p class="tags">Tags: <span>#JavaScript</span>, <span>#WebDevelopment</span>, <span>#Calculator</span></p>
+                
+                <p class="footer-content">
+                    <span>Gurdeep Kaur</span>
+                    <span>October 15, 2024</span>
+                    <a href="javascript:void(0);" class="read-more">
+                        <i class="fa fa-arrow-right"></i>
+                    </a>
+                </p>
+            </div>
+
+            <div class="article" id="gurdeep-article2">
+                <div class="image-container">
+                    <img src="images/gurdeep/snakeGame.png" alt="Snake Game">
+                </div>
+                <h3>Building a Classic Snake Game with JavaScript</h3>
+                <p class="excerpt">Dive into the world of game development by recreating the classic Snake Game.</p>
+                <p class="body-content">This project includes features like keyboard controls, collision detection, and score tracking, built using HTML Canvas and JavaScript. It demonstrates core game logic and canvas rendering techniques.</p>
+                <p>Category: <span>Projects</span></p>
+                <p class="tags">Tags: <span>#JavaScript</span>, <span>#GameDevelopment</span>, <span>#Canvas</span></p>
+                
+                <p class="footer-content">
+                    <span>Gurdeep Kaur</span>
+                    <span>Nov 04, 2024</span>
+                    <a href="javascript:void(0);" class="read-more">
+                        <i class="fa fa-arrow-right"></i>
+                    </a>
+                </p>
+            </div>
+
+            <div class="article" id="gurdeep-article3">
+                <div class="image-container">
+                    <img src="images/gurdeep/animation.png" alt="Timer and Animation Control">               
+                </div>  
+                <h3>Building an Interactive Timer and Smooth Animation Control System</h3>
+                <p class="excerpt">Explore an engaging project that combines real-time timers with smooth animations using JavaScript, jQuery, Bootstrap, and CSS.</p>
+                <p class="body-content">
+                    This project includes a dynamic timer with selectable durations (30s, 60s, 90s), a visually interactive progress bar, and animated dots that move smoothly across the screen with vertical oscillation. 
+                    Features include start, pause, and stop controls, leveraging JavaScript's <code>requestAnimationFrame</code> for fluid animations. CSS plays a critical role in styling the components, including the vibrant dot animations, hover effects on buttons, and a visually appealing blurred background. The combination of HTML, CSS, Bootstrap, and JavaScript showcases a well-rounded approach to interactive front-end development.
+                </p>
+                <p>Category: <span>Projects</span></p>
+                <p class="tags">Tags: <span>#JavaScript</span>, <span>#Animation</span>, <span>#CSS</span>, <span>#Bootstrap</span></p>
+                
+                <p class="footer-content">
+                    <span>Gurdeep Kaur</span>
+                    <span>Nov 27, 2024</span>
+                    <a href="javascript:void(0);" class="read-more">
+                        <i class="fa fa-arrow-right"></i>
+                    </a>
+                </p>
+            </div>
+
+            <!-- KENDRA ARTICLES -->
+            <div class="article" id="kendra-article1">
+                <div class="image-container">
+                    <img src="images/kendra/js-game.png" alt="Hungry Hero - A Simple JavaScript Game">
+                </div>
+                <h3>Hungry Hero - Building a Fun and Interactive JavaScript Game</h3>
+                <p class="excerpt">Learn how to build a fun and interactive JavaScript game, Hungry Hero, where players collect food and avoid enemies in a dynamic maze environment.</p>
+                <p class="body-content">Creating a game like Hungry Hero is a fantastic way to sharpen your JavaScript skills. This project introduces concepts like event listeners, collision detection, and dynamic DOM updates. Players navigate a maze, collecting food to boost health while dodging enemies that make the game progressively challenging. With three difficulty levels—easy, medium, and hard—Hungry Hero tests your ability to manage state and interactions effectively. The visual elements and animations bring the game to life, making it an engaging project for any aspiring game developer.</p>
+                <p>Category: <span>JavaScript Games</span></p>
+                <p class="tags">Tags: <span>#JavaScript</span>, <span>#GameDevelopment</span>, <span>#MazeGame</span>, <span>#Frontend</span></p>
+                
+                <p class="footer-content">
+                    <span>Kendra</span>
+                    <span>October 27, 2024</span>
+                    <a href="javascript:void(0);" class="read-more">
+                        <i class="fa fa-arrow-right"></i>
+                    </a>
+                </p>
+            </div>
+            
+            <div class="article" id="kendra-article2">
+                <div class="image-container">
+                    <img src="images/kendra/js-timer.png" alt="Creating a Simple JavaScript Timer">
+                </div>
+                <h3>Step-by-Step Guide to Creating a Versatile and Animated JavaScript Timer</h3>
+                <p class="excerpt">A step-by-step guide to creating a versatile JavaScript timer with animated visuals and custom formats.</p>
+                <p class="body-content">A JavaScript timer is a fundamental yet powerful tool for web development. In this article, we explore how to build a timer with a clean 00:00:00 format and smooth animations using requestAnimationFrame. This timer can be extended for use in games, productivity apps, or countdowns. You'll learn how to integrate visual progress bars, manage precise time intervals, and keep your code efficient. Whether you’re new to JavaScript or looking for a practical project, a timer is a rewarding feature to develop and customize.</p>
+                <p>Category: <span>JavaScript Essentials</span></p>
+                <p class="tags">Tags: <span>#JavaScript</span>, <span>#Timer</span>, <span>#FrontendDevelopment</span>, <span>#Animation</span></p>
+                
+                <p class="footer-content">
+                    <span>Kendra</span>
+                    <span>Nov 04, 2024</span>
+                    <a href="javascript:void(0);" class="read-more">
+                        <i class="fa fa-arrow-right"></i>
+                    </a>
+                </p>
+            </div>
+            
+            <div class="article" id="kendra-article3">
+                <div class="image-container">
+                    <img src="images/kendra/js-splash-screen.png" alt="Designing a JavaScript Splash Screen">
+                </div>
+                <h3>Designing a Custom JavaScript Splash Screen for Enhanced User Experience</h3>
+                <p class="excerpt">Add polish to your projects with a JavaScript splash screen that captivates users before the main content loads.</p>
+                <p class="body-content">A splash screen is a great way to set the tone for your web application or game. In this tutorial, we build a custom JavaScript splash screen that fades seamlessly into the main content. You’ll learn how to use CSS transitions and JavaScript to control the display timing and animations. This project covers essential techniques such as managing setTimeout, adding brand visuals, and improving user experience with smooth loading indicators. Perfect for giving your projects that professional edge.</p>
+                <p>Category: <span>JavaScript UI/UX</span></p>
+                <p class="tags">Tags: <span>#JavaScript</span>, <span>#SplashScreen</span>, <span>#WebDesign</span>, <span>#UserExperience</span></p>
+                
+                <p class="footer-content">
+                    <span>Kendra</span>
+                    <span>Nov 19, 2024</span>
+                    <a href="javascript:void(0);" class="read-more">
+                        <i class="fa fa-arrow-right"></i>
+                    </a>
+                </p>
+            </div>
+        </section>
+
+        <!-- SECTION-4-->
+        <h2 id="popular-posts-heading">Popular Posts</h2>
+        <section id="popular-posts">
+            <div class="post">
+                <div class="circle-container">
+                    <span class="number">1</span>
+                    <img src="images/post1.jpg" alt="Showcasing a futuristic design or a tech trend.">
+                </div>
+                <div>
+                    <a href="#" class="post-heading">Web Development Trends to Watch in 2025</a>
+                </div>
+            </div>
+
+            <div class="post">
+                <div class="circle-container">
+                    <span class="number">2</span>
+                    <img src="images/post2.webp" alt="Post 2">
+                </div>
+                <div>
+                    <a href="#" class="post-heading">Top 10 Web Developer Tools</a>
+                </div>
+            </div>
+
+            <div class="post">
+                <div class="circle-container">
+                    <span class="number">3</span>
+                    <img src="images/post3.png" alt="Visual representing different screen sizes or a website layout.">
+                </div>
+                <div>
+                    <a href="#" class="post-heading">Mastering Responsive Design: A Step-by-Step Guide</a>
+                </div>
+            </div>
+
+            <div class="post">
+                <div class="circle-container">
+                    <span class="number">4</span>
+                    <img src="images/post4.png" alt="Visual comparison or logos of React, Vue, and Angular">
+                </div>
+                <div>
+                    <a href="#" class="post-heading">Understanding JavaScript Frameworks: React vs. Vue vs. Angular</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <nav class="footer-nav" aria-label="Main Navigation">
+            <ul class="footer-menu">
+                <li class="menu-item" data-role="footer-menu-title">
+                    Menu
+                </li>
+                <li class="menu-item">
+                    <a href="#home" class="footer-link">Home</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#about" class="footer-link">About</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#services" class="footer-link active">Services</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#contact" class="footer-link">Contact</a>
+                </li>
+                <li class="menu-item special">
+                    <a href="#newsletter" class="footer-link">Newsletter</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!--Social Media Icons Section-->
+        <div class="social-icons">
+            <a href="https://youtube.com" class="social-icon">
+                <img src="images/youtube-icon.svg" alt="Facebook" />
+            </a>
+            <a href="https://twitter.com" class="social-icon">
+                <img src="images/twitter-icon.svg" alt="Twitter" />
+            </a>
+            <a href="https://instagram.com" class="social-icon">
+                <img src="images/instagram-icon.svg" alt="Instagram" />
+            </a>
+        </div>
+
+        <p>© 2024 Simply Seven News - All rights reserved.</p>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+    
 </body>
 </html>
