@@ -5,8 +5,242 @@
     box-sizing: border-box;
 }
 
+/* CSS Variables */
 :root {
     --body-font: "Arial", sans-serif;
     --title-font: "Barlow Condensed", sans-serif;
+    --off-white: #b9b8b8;
+    --white: #fff;
+    --main-background-color: black;
+    --lime-green: #a9db5f;
 }
+
+/************************************ NAVIGATION BAR **********************************/
+nav {
+    background-color: var(--main-background-color);
+    color: var(--white);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+}
+
+nav img {
+    height: 40px;
+    margin-right: 25px;
+}
+  
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+  
+nav ul li {
+    margin-right: 1rem;
+}
+  
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-family: var(--body-font);
+    font-weight: 400;
+    font-size: 18px;
+    transition: color 0.3s ease; /*transition to hover color*/
+}
+  
+nav ul li a:hover {
+    color: var(--off-white)
+}
+ 
+/***********************************SEARCH BAR***************************************/
+.search-container {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+}
+  
+.search-input {
+    width: 20px;
+    padding: 15px 40px 15px 15px;
+    position: relative;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    border: none;
+    outline: none;
+    transition: width 0.4s ease;
+}
+
+/* Search Bar Animation based on hover state */
+.search-input:hover {
+    width: 350px;
+}
+i {
+    position: relative;
+    left: -44px;
+    color: black;
+    pointer-events: none;
+}
+
+/************************************ HAMBURGER MENU **********************************/
+.hamburger-menu {
+    display: none; /* Hidden by default for larger screens */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+
+.hamburger-menu span {
+    display: block;
+    height: 4px;
+    background-color: var(--white);
+    border-radius: 4px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hamburger Animation States using nth-child */
+.hamburger-menu.active span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+/************************************ FOOTER SECTION **********************************/
+footer {
+    background-color: var(--main-background-color);
+    color: var(--white);
+    font-family: var(--body-font);
+    padding: 2rem 0;
+    text-align: center;
+    border-top: 1px solid var(--lime-green);
+}
+
+footer p {
+    color: var(--lime-green);
+    font-family: var(--title-font);
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+
+/***************************************FOOTER NAV*************************************/
+.footer-nav {
+    display: flex;
+    justify-content: space-around; /* Center horizontally */
+    padding: 1rem 0; /* Add some spacing */
+    align-items: center; /* Center vertically */
+    height: auto;  /* Height expands automatically on small screens */
+}
+
+.footer-nav > ul > li {
+    list-style: none;
+    padding: .5em;
+}
+
+.footer-link:hover {
+    color: var(--lime-green);
+}
+
+.menu-item:not(:first-child) {
+    border: 1px solid var(--lime-green);
+    border-radius: 30px;
+}
+
+/*Attribute Selector overwrite styling for Menu Li*/
+[data-role="footer-menu-title"] {
+    text-transform: uppercase;
+    color: var(--lime-green);
+    font-weight: 900;
+    cursor: pointer;
+}
+
+/***************************SOCIAL MEDIA ICON SECTION********************************/
+.social-icon {
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;  
+    overflow: hidden; 
+    transition: transform 0.3s ease; 
+}
+
+/* Social Icons Container */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.social-icon img {
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+/************************************ MEDIA QUERIES **********************************/
+/* Tablet View */
+@media (max-width: 768px) {
+
+    /* Tablet/Mobile Navigation */
+    .hamburger-menu {
+        display: flex;
+    }
+    nav {
+        position: relative; /* Ensure the nav bar is the anchor for positioning */
+    }
+
+    .search-input:hover {
+        width: 250px; /*adjust input width for smaller screens */
+    }
+    .nav-links {
+        opacity: 0;
+        visibility: hidden; /*default to hidden with opacity 0*/
+        flex-direction: column;
+        position: absolute; /* Position relative to the nav */
+        top: 100%; /* Aligns directly below the nav bar */
+        right: 0; /* Aligns the dropdown to the right edge of the nav */
+        background-color: var(--main-background-color); /* Match nav background color */
+        width: 100%; /* Full-width dropdown */
+        padding: 1rem 0;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        z-index: 5; /* Ensure it's above other elements */
+    }
+    /* Dropdown Active State */
+    .nav-links.active {
+        transform: translateY(0); /* Dropdown slides down */
+        opacity: 1; /* Dropdown becomes visible */
+        visibility: visible;
+    }
+    /* Styling for nav link elements */
+    .nav-links li {
+        text-align: center;
+        margin: 0.5rem 0;
+    }
+
+    /*Stack Footer nav vertically*/
+    .footer-menu {
+        flex-direction: column; 
+        gap: 10px;
+    }
+}
+
 
