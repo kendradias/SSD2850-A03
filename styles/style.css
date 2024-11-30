@@ -4,13 +4,10 @@
 *:before,
 *:after {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 /* Custom Properties */
-/* :root {
-    --background-color: black;
-    --text-color: #bdc3c7;
-} */
 
 :root {
     --background-color: black;
@@ -19,7 +16,6 @@
     --title-font: "Barlow Condensed", sans-serif;
     --off-white: #b9b8b8;
     --white: #fff;
-    --main-background-color: black;
     --lime-green: #a9db5f;
 }
 
@@ -35,7 +31,7 @@ body {
 
 /************************************ NAVIGATION BAR **********************************/
 .header-nav {
-    background-color: var(--main-background-color);
+    background-color: var(--background-color);
     color: var(--white);
     display: flex;
     justify-content: flex-start;
@@ -55,6 +51,7 @@ body {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    transition: transform 0.3s ease;
 }
   
 .header-nav ul li {
@@ -101,7 +98,7 @@ body {
 i {
     position: relative;
     left: -44px;
-    color: black;
+    color: var(--background-color);
     pointer-events: none;
 }
 
@@ -140,7 +137,7 @@ i {
 
 /************************************ FOOTER SECTION **********************************/
 footer {
-    background-color: var(--main-background-color);
+    background-color: var(--background-color);
     color: var(--white);
     font-family: var(--body-font);
     padding: 2rem 0;
@@ -241,7 +238,7 @@ footer p {
         position: absolute; /* Position relative to the nav */
         top: 100%; /* Aligns directly below the nav bar */
         right: 0; /* Aligns the dropdown to the right edge of the nav */
-        background-color: var(--main-background-color); /* Match nav background color */
+        background-color: var(--background-color); /* Match nav background color */
         width: 100%; /* Full-width dropdown */
         padding: 1rem 0;
         transform: translateY(-100%);
