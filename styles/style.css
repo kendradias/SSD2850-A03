@@ -156,7 +156,7 @@ footer p {
 .footer-nav {
     display: flex;
     justify-content: space-around; /* Center horizontally */
-    padding: 1rem 0; /* Add some spacing */
+    padding: 1rem 0; 
     align-items: center; /* Center vertically */
     height: auto;  /* Height expands automatically on small screens */
 }
@@ -164,6 +164,7 @@ footer p {
 .footer-menu {
     display: flex;
     gap: 20px;
+    transition: all 0.3s ease-in-out; /* Smooth transition */
 }
 
 .footer-nav > ul > li {
