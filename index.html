@@ -40,7 +40,7 @@
             <!--SEARCH BAR-->
             <div class="search-container">
                 <input type="text" placeholder="Search..." class="search-input">
-                <i class="fas fa-search"></i>
+                <i class="fas fa-search search-icon"></i>
               </div>
         </nav>
     </header>
@@ -55,24 +55,55 @@
         </section>
 
         <!-- SECTION-2 -->
-        <section id="top-highlights">
-            <div class="highlight-container">
+        <section id="top-highlights" class="highlights-section"> 
+            <div class="highlight-article">
+                <!-- Random article will be injected here by JavaScript -->
+                <div id="highlight-section" class="highlight"></div>
+            </div>
+        
+            <div class="highlight-sidebar">
+                <div class="sidebar-content">
+                    <h2>Trending Now</h2>
+                </div>
+                <div class="animated-content">
+                    <div id="animated-text" class="animated-text">
+                        <span>=> Explore the latest trends and insights in web development, UI/UX design, and more.</span>
+                        <span>=> Discover new tools and frameworks that can enhance your workflow.</span>
+                        <span>=> Learn about the best practices in responsive design.</span>
+                        <span>=> Stay updated with the latest industry news and events.</span>
+                        <span>=> Join communities and forums to connect with other developers.</span>
+                        <span>=> Improve your skills by taking on open-source projects and challenges.</span>
+                        <span>=> Dive deep into cutting-edge technologies like AI, Machine Learning, and Cloud Computing.</span>
+                        <span>=> Sharpen your problem-solving abilities through coding competitions and hackathons.</span>
+                        <span>=> Expand your knowledge in mobile development and cross-platform applications.</span>
+                        <span>=> Build your portfolio by creating real-world projects and showcasing your expertise.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+            <!-- <div id="highlight-section" class="highlight">
+                
+            </div> -->
+            
+            
+            
+            <!-- <div class="highlight-container"> -->
                 <!-- Video Section -->
-                <div class="highlight-video">
+                <!-- <div class="highlight-video">
                     <video width="100%" height="300px" controls>
                         <source src="videos/animation.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-                </div>
+                </div> -->
                 
                 <!-- Content Section -->
-                <div class="highlight-content">
+                <!-- <div class="highlight-content">
                     <h2>Breaking News: Major Cybersecurity Breach Exposes User Data</h2>
                     <p>A recent breach at a major tech company has exposed millions of users' personal data. This news is sending shockwaves across the tech industry, prompting security experts to reassess online safety protocols. Read on to find out what went wrong and how you can protect your data online.</p>
                     <a href="#">Read Full Article</a>
                 </div>
-            </div>
-        </section>
+            </div> -->
+        
 
         <!-- SECTION-3 -->
         <h2 id="article-heading">Latest Articles</h2>
@@ -85,14 +116,14 @@
                 <h3>Creating a Simple Calculator with HTML, CSS, and JavaScript</h3>
                 <p class="excerpt">Learn how to build a functional calculator using basic web development technologies.</p>
                 <p class="body-content">A calculator is a basic yet essential tool that demonstrates the power of programming. It supports addition, subtraction, multiplication, and division, showcasing DOM manipulation and event handling.</p>
-                <p>Category: <span>Projects</span></p>
+                <p>Category: <span>JavaScript Applications</span></p>
                 <p class="tags">Tags: <span>#JavaScript</span>, <span>#WebDevelopment</span>, <span>#Calculator</span></p>
                 
                 <p class="footer-content">
                     <span>Gurdeep Kaur</span>
                     <span>October 15, 2024</span>
                     <a href="javascript:void(0);" class="read-more">
-                        <i class="fa fa-arrow-right"></i>
+                        <i class="fa fa-arrow-right read-more-icon"></i>
                     </a>
                 </p>
             </div>
@@ -104,14 +135,14 @@
                 <h3>Building a Classic Snake Game with JavaScript</h3>
                 <p class="excerpt">Dive into the world of game development by recreating the classic Snake Game.</p>
                 <p class="body-content">This project includes features like keyboard controls, collision detection, and score tracking, built using HTML Canvas and JavaScript. It demonstrates core game logic and canvas rendering techniques.</p>
-                <p>Category: <span>Projects</span></p>
+                <p>Category: <span>2D JavaScript Games</span></p>
                 <p class="tags">Tags: <span>#JavaScript</span>, <span>#GameDevelopment</span>, <span>#Canvas</span></p>
                 
                 <p class="footer-content">
                     <span>Gurdeep Kaur</span>
                     <span>Nov 04, 2024</span>
                     <a href="javascript:void(0);" class="read-more">
-                        <i class="fa fa-arrow-right"></i>
+                        <i class="fa fa-arrow-right read-more-icon"></i>
                     </a>
                 </p>
             </div>
@@ -126,14 +157,14 @@
                     This project includes a dynamic timer with selectable durations (30s, 60s, 90s), a visually interactive progress bar, and animated dots that move smoothly across the screen with vertical oscillation. 
                     Features include start, pause, and stop controls, leveraging JavaScript's <code>requestAnimationFrame</code> for fluid animations. CSS plays a critical role in styling the components, including the vibrant dot animations, hover effects on buttons, and a visually appealing blurred background. The combination of HTML, CSS, Bootstrap, and JavaScript showcases a well-rounded approach to interactive front-end development.
                 </p>
-                <p>Category: <span>Projects</span></p>
+                <p>Category: <span>UI/UX Projects</span></p>
                 <p class="tags">Tags: <span>#JavaScript</span>, <span>#Animation</span>, <span>#CSS</span>, <span>#Bootstrap</span></p>
                 
                 <p class="footer-content">
                     <span>Gurdeep Kaur</span>
                     <span>Nov 27, 2024</span>
                     <a href="javascript:void(0);" class="read-more">
-                        <i class="fa fa-arrow-right"></i>
+                        <i class="fa fa-arrow-right read-more-icon"></i>
                     </a>
                 </p>
             </div>
@@ -153,7 +184,7 @@
                     <span>Kendra</span>
                     <span>October 27, 2024</span>
                     <a href="javascript:void(0);" class="read-more">
-                        <i class="fa fa-arrow-right"></i>
+                        <i class="fa fa-arrow-right read-more-icon"></i>
                     </a>
                 </p>
             </div>
@@ -172,7 +203,7 @@
                     <span>Kendra</span>
                     <span>Nov 04, 2024</span>
                     <a href="javascript:void(0);" class="read-more">
-                        <i class="fa fa-arrow-right"></i>
+                        <i class="fa fa-arrow-right read-more-icon"></i>
                     </a>
                 </p>
             </div>
@@ -191,7 +222,7 @@
                     <span>Kendra</span>
                     <span>Nov 19, 2024</span>
                     <a href="javascript:void(0);" class="read-more">
-                        <i class="fa fa-arrow-right"></i>
+                        <i class="fa fa-arrow-right read-more-icon"></i>
                     </a>
                 </p>
             </div>
@@ -240,6 +271,22 @@
                 </div>
             </div>
         </section>
+
+        <!-- SECTION 5 -->
+         <section id="subscribe-section">
+                <div class="subscribe-heading">
+                    <h2>
+                        <span>S</span><span>U</span><span>B</span><span>S</span><span>C</span><span>R</span><span>I</span><span>B</span><span>E</span>
+                        <span>N</span><span>O</span><span>W</span>
+                    </h2>
+                    <p>Stay updated with the latest projects and articles!</p>
+                </div>
+
+                <div class="subscribe-form">
+                    <input type="email" placeholder="Enter your email" id="subscribe-email" />
+                    <button type="submit" id="subscribe-button">Subscribe</button>
+                </div>
+         </section>
     </main>
 
     <footer>
