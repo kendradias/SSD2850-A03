@@ -164,6 +164,11 @@ footer p {
     height: auto;  /* Height expands automatically on small screens */
 }
 
+.footer-menu {
+    display: flex;
+    gap: 20px;
+}
+
 .footer-nav > ul > li {
     list-style: none;
     padding: .5em;
