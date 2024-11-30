@@ -64,7 +64,7 @@ body {
     font-family: var(--body-font);
     font-weight: 400;
     font-size: 18px;
-    transition: color 0.3s ease; /*transition to hover color*/
+    transition: color 0.3s ease; 
 }
   
 .header-nav ul li a:hover {
@@ -155,16 +155,16 @@ footer p {
 /***************************************FOOTER NAV*************************************/
 .footer-nav {
     display: flex;
-    justify-content: space-around; /* Center horizontally */
+    justify-content: space-around;
     padding: 1rem 0; 
-    align-items: center; /* Center vertically */
+    align-items: center; 
     height: auto;  /* Height expands automatically on small screens */
 }
 
 .footer-menu {
     display: flex;
     gap: 20px;
-    transition: all 0.3s ease-in-out; /* Smooth transition */
+    transition: all 0.3s ease-in-out;
 }
 
 .footer-nav > ul > li {
@@ -236,10 +236,10 @@ footer p {
         opacity: 0;
         visibility: hidden; /*default to hidden with opacity 0*/
         flex-direction: column;
-        position: absolute; /* Position relative to the nav */
+        position: absolute; 
         top: 100%; /* Aligns directly below the nav bar */
         right: 0; /* Aligns the dropdown to the right edge of the nav */
-        background-color: var(--background-color); /* Match nav background color */
+        background-color: var(--background-color); 
         width: 100%; /* Full-width dropdown */
         padding: 1rem 0;
         transform: translateY(-100%);
