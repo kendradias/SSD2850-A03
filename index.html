@@ -20,16 +20,20 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+    <!-------------- HEADER SECTION -------------->
     <header>
         <nav class="header-nav">
-            <!--HAMBURGER MENU-->
+            <!-- LOGO -->
             <img src="images/logoc.png" alt="Simply Seven News Logo" />
+
+            <!-- HAMBURGER MENU FOR MOBILE -->
             <div class="hamburger-menu" id="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-            <!--MAIN NAV-->
+
+            <!-- MAIN NAVIGATION -->
             <ul class="nav-links" id="nav-links" aria-label="Main Navigation">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#article-heading">Latest Articles</a></li>
@@ -37,6 +41,7 @@
                 <li><a href="#subscribe-section">Subscribe</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            
             <!--SEARCH BAR-->
             <div class="search-container">
                 <input type="text" placeholder="Search..." class="search-input">
@@ -45,28 +50,30 @@
         </nav>
     </header>
 
+    <!-------------- MAIN SECTION -------------->
     <main class="container">
-        <!-- SECTION-1 -->
+        <!-- 1-HERO SECTON -->
         <section id="hero">
             <h1>
                 <span>S</span><span>I</span><span>M</span><span>P</span><span>L</span><span>Y</span>
                 <span>S</span><span>E</span><span>V</span><span>E</span><span>N</span>
             </h1>
         </section>
-
-        <!-- SECTION-2 -->
+        <!-- Highlighted Article -->
         <section id="top-highlights" class="highlights-section"> 
             <div class="highlight-article">
                 <!-- Random article will be injected here by JavaScript -->
                 <div id="highlight-section" class="highlight"></div>
             </div>
         
+            <!-- Trending Sidebar -->
             <div class="highlight-sidebar">
                 <div class="sidebar-content">
                     <h2>Trending Now</h2>
                 </div>
                 <div class="animated-content">
                     <div id="animated-text" class="animated-text">
+                        <!-- Trending Text Items -->
                         <span>=> Explore the latest trends and insights in web development, UI/UX design, and more.</span>
                         <span>=> Discover new tools and frameworks that can enhance your workflow.</span>
                         <span>=> Learn about the best practices in responsive design.</span>
@@ -105,10 +112,10 @@
             </div> -->
         
 
-        <!-- SECTION-3 -->
+        <!-- 3-LATEST ARTICLES SECTION -->
         <h2 id="article-heading">Latest Articles</h2>
         <section id="articles">
-            <!-- GURDEEP ARTICLES -->
+            <!-- Gurdeep's Articles -->
             <div class="article" id="gurdeep-article1">
                 <div class="image-container">
                     <img src="images/gurdeep/calculator.png" alt="Simple Calculator">
@@ -169,7 +176,7 @@
                 </p>
             </div>
 
-            <!-- KENDRA ARTICLES -->
+            <!-- Kendra's Articles -->
             <div class="article" id="kendra-article1">
                 <div class="image-container">
                     <img src="images/kendra/js-game.png" alt="Hungry Hero - A Simple JavaScript Game">
@@ -228,7 +235,7 @@
             </div>
         </section>
 
-        <!-- SECTION-4-->
+        <!-- 4-POPULAR POSTS SECTION -->
         <h2 id="popular-posts-heading">Popular Posts</h2>
         <section id="popular-posts">
             <div class="post">
@@ -272,7 +279,7 @@
             </div>
         </section>
 
-        <!-- SECTION 5 -->
+        <!-- 5-SUBSCRIBE SECTION -->
          <section id="subscribe-section">
                 <div class="subscribe-heading">
                     <h2>
@@ -289,6 +296,7 @@
          </section>
     </main>
 
+    <!-------------- FOOTER SECTION -------------->
     <footer>
         <nav class="footer-nav" aria-label="Main Navigation">
             <ul class="footer-menu">
@@ -326,7 +334,7 @@
             </a>
         </div>
 
-        <p>© 2024 Simply Seven News - All rights reserved.</p>
+        <p>© 2024 Simply Seven - All rights reserved.</p>
     </footer>
 
     <script src="scripts/script.js"></script>

@@ -27,15 +27,12 @@ body {
     padding: 0;
 }
 
-/************************************ NAVIGATION BAR **********************************/
-/* Header Navigation */
+/*******************NAVIGATION BAR*******************/
 .header-nav {
     background-color: var(--background-color);
     color: var(--white);
     display: flex;
-
     justify-content: flex-start;
-    /* justify-content: space-between; */
     align-items: center;
     padding: 1rem 2rem;
     position: relative;
@@ -70,7 +67,6 @@ body {
     font-weight: 400;
     transition: color 0.3s ease;
 }
-
 .nav-links li a:hover {
     color: var(--vibrant-yellow);
 }
@@ -182,94 +178,6 @@ body {
 .nav-links li {
     text-align: center;
     margin: 10px 0;
-}
-
-/************************************ FOOTER SECTION **********************************/
-footer {
-    background-color: var(--background-color);
-    color: var(--white);
-    font-family: var(--body-font);
-    /* padding: 2rem 0; */
-    text-align: center;
-    border-top: 1px solid var(--bottom-border);
-}
-
-footer p {
-    color: var(--lime-green);
-    font-family: var(--title-font);
-    font-weight: 600;
-    margin: 0.5rem 0;
-}
-
-/***************************************FOOTER NAV*************************************/
-.footer-nav {
-    display: inline-block;
-    justify-content: space-around; 
-    padding: 1rem 0; 
-    align-items: center; 
-    height: auto;  
-}
-.footer-menu{
-    padding: 1rem 0; 
-}
-
-.footer-nav > ul > li {
-    list-style: none;
-    margin: 5px;
-    padding: .5em;
-}
-
-.footer-nav ul li a{
-    text-decoration: none;
-}
-
-.footer-link{
-    color: var(--white);
-}
-
-.footer-link:hover {
-    color: var(--lime-green);
-}
-
-.menu-item:not(:first-child) {
-    border: 1px solid var(--lime-green);
-    border-radius: 30px;
-}
-
-/*Attribute Selector overwrite styling for Menu Li*/
-[data-role="footer-menu-title"] {
-    text-transform: uppercase;
-    color: var(--lime-green);
-    font-weight: 900;
-    cursor: pointer;
-}
-
-/***************************SOCIAL MEDIA ICON SECTION********************************/
-.social-icon {
-    display: inline-block;
-    width: 3rem;
-    height: 3rem;  
-    overflow: hidden; 
-    transition: transform 0.3s ease; 
-}
-
-/* Social Icons Container */
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-}
-
-.social-icon img {
-    width: 3rem;
-    height: 3rem;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.social-icon:hover {
-    transform: scale(1.2);
 }
 
 /*******************1-HERO SECTION*******************/
@@ -389,7 +297,7 @@ footer p {
     font-size: 1.5em;
     font-weight: bold;
     margin-bottom: 10px;
-    color: white;
+    color: var(--white);
     text-justify: auto;
 }
 
@@ -428,7 +336,7 @@ footer p {
 .sidebar-content h2 {
     font-size: 1rem;
     margin-bottom: 15px;
-    color: white;
+    color: var(--white);;
 }
 .animated-text {
     font-size: 1rem; 
@@ -500,9 +408,8 @@ footer p {
     padding: 3px;
     background: linear-gradient(90deg, #ff1493, #f1c40f, #1abc9c, #9b59b6);
     background-size: 300% 300%;
-    -webkit-mask: 
-        linear-gradient(#fff 0 0) content-box, 
-        linear-gradient(#fff 0 0);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, 
+                linear-gradient(#fff 0 0);
     -webkit-mask-composite: destination-out;
     mask-composite: exclude;
     z-index: -1; 
@@ -529,16 +436,17 @@ footer p {
 #article-heading, #popular-posts-heading{
     text-align: center;
     font-size: 2rem;
-    color: white;
+    color: var(--white);;
 }
 
-.article h3 {
-    color: white;
+/* Descendant Selector */
+#articles .article h3 {
+    color: var(--white);;
     font-size: 1.5rem;
     margin: 0;
 }
-
-.article .image-container {
+/* Child Selector */
+.article > .image-container {
     display: none;
     position: relative;
     width: 300px;
@@ -586,9 +494,8 @@ footer p {
 .article p {
     color: #bdc3c7;
 }
-
-
-.article a {
+/* Attribute Selector */
+.article a[href] {
     color: transparent;
     text-decoration: none;
     font-weight: bold;
@@ -598,7 +505,7 @@ footer p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: white;
+    color: var(--white);;
 }
 
 .footer-content span:first-child {
@@ -656,8 +563,8 @@ footer p {
     padding: 20px;
     border-bottom: 2px solid var(--bottom-border);
 }
-
-.post {
+/* Child Selector */
+#popular-posts > .post  {
     display: flex;
     flex-direction: column; 
     justify-content: flex-start;
@@ -675,7 +582,7 @@ footer p {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(white, white) padding-box, 
+    background: linear-gradient(var(--white), var(--white)) padding-box, 
                 linear-gradient(45deg, red, orange, yellow, green, blue, purple) border-box;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border: 5px solid transparent;
@@ -710,7 +617,7 @@ footer p {
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid white;
+    border: 3px solid var(--white);;
     transition: transform 1s ease;
     z-index: 1;
 }
@@ -724,7 +631,7 @@ footer p {
     margin-top: 10px; 
     font-size: 0.9rem; 
     font-weight: bold;
-    color: white; 
+    color: var(--white);; 
     text-align: center; 
     line-height: 1.2;
     flex-grow: 1;
@@ -744,7 +651,6 @@ footer p {
 
 /*******************5-SUBSCRIBE SECTION*******************/
 
-/* Styles for the subscribe-section */
 #subscribe-section {
     background-color: var(--background-color);
     display: flex;
@@ -773,7 +679,8 @@ footer p {
     margin-top: 10px;
 }
 
-#subscribe-section h2 span {
+/* Descendant Selector */
+#subscribe-section span {
     display: inline-flex;
     transition: transform 0.3s ease, color 0.3s ease;
     position: relative;
@@ -787,11 +694,11 @@ footer p {
 #subscribe-section h2 span:hover {
     transform: scale(1.2);
 }
-
-#subscribe-section p {
+/* Adjacent Sibling Selector */
+#subscribe-section h2 + p {
     font-size: 1rem;
     margin-bottom: 20px;
-    color: white;
+    color: var(--white);;
     text-align: center;
 }
 
@@ -802,15 +709,15 @@ footer p {
     justify-content: center;
     gap: 10px;
 }
-
-#subscribe-email {
+/* Attribute Selector */
+input[type="email"] {
     padding: 15px;
     width: 90%; 
     border: none;
     background-color: #222;
     border-radius: 15px;
     font-size: 1rem;
-    color: white;
+    color: var(--white);;
 }
 
 #subscribe-button {
@@ -826,6 +733,92 @@ footer p {
 }
 #subscribe-button:hover{
     transform: scaleY(1.1);
+}
+
+/*******************FOOTER SECTION*******************/
+
+footer {
+    background-color: var(--background-color);
+    color: var(--white);
+    font-family: var(--body-font);
+    /* padding: 2rem 0; */
+    text-align: center;
+    border-top: 1px solid var(--bottom-border);
+}
+
+footer p {
+    color: var(--lime-green);
+    font-family: var(--title-font);
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+.footer-nav {
+    display: inline-block;
+    justify-content: space-around; 
+    padding: 1rem 0; 
+    align-items: center; 
+    height: auto;  
+}
+.footer-menu{
+    padding: 1rem 0; 
+}
+
+.footer-nav > ul > li {
+    list-style: none;
+    margin: 5px;
+    padding: .5em;
+}
+
+.footer-nav > ul > li > a{
+    text-decoration: none;
+}
+
+.footer-link{
+    color: var(--white);
+}
+
+.footer-link:hover {
+    color: var(--lime-green);
+}
+
+.menu-item:not(:first-child) {
+    border: 1px solid var(--lime-green);
+    border-radius: 30px;
+}
+
+/*Attribute Selector overwrite styling for Menu Li*/
+[data-role="footer-menu-title"] {
+    text-transform: uppercase;
+    color: var(--lime-green);
+    font-weight: 900;
+    cursor: pointer;
+}
+/* Social Media Section */
+.social-icon {
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;  
+    overflow: hidden; 
+    transition: transform 0.3s ease; 
+}
+
+/* Social Icons Container */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.social-icon img {
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
 }
 
 /************************MEDIA QUERIES************************/
