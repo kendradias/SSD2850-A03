@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (charIndex < text.length) {
                 line.textContent = text.substring(0, charIndex + 1); // Update text one character at a time
                 charIndex++;
-                setTimeout(typeCharacter, 100); // Adjust typing speed here (faster or slower)
+                setTimeout(typeCharacter, 50); // Adjust typing speed here (faster or slower)
             } else {
                 lineIndex++;
                 charIndex = 0; // Reset character index for the next line
@@ -47,19 +47,28 @@ document.querySelectorAll('.read-more').forEach(function(button) {
     button.addEventListener('click', function() {
         const bodyContent = this.closest('.article').querySelector('.body-content');
         const tags = this.closest('.article').querySelector('.tags');
+        const icon = this.querySelector('.read-more-icon');
 
         // Toggle visibility of body content and tags
         if (bodyContent.style.display === "" || bodyContent.style.display === "none") {
             bodyContent.style.display = "block";
             tags.style.display = "block";
-            this.innerHTML = '<i class="fa fa-arrow-up"></i>';  // Change the text and icon
+            this.innerHTML = '<i class="fa fa-arrow-up read-more-icon"></i>';  // Change the icon
+            this.classList.add('active'); // Add active class
         } else {
             bodyContent.style.display = "none";
             tags.style.display = "none";
-            this.innerHTML = '<i class="fa fa-arrow-right"></i>';  // Reset the text and icon
+            this.innerHTML = '<i class="fa fa-arrow-right read-more-icon"></i>';  // Reset the icon
+            this.classList.remove('active'); // Remove active class
+
+            // Explicitly reset icon color to default
+            if (icon) {
+                icon.style.color = '#222';
+            }
         }
     });
 });
+
 
 // Function to display a random article from the existing ones
 function displayRandomArticleFromExisting() {
